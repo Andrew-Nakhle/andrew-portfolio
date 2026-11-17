@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', 'Cairo', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root,
+[data-theme="light"] {
+  --bg: #f7faff;
+  --surface: #ffffff;
+  --text: #172b3a;
+  --muted: #64748b;
+  --primary: #087f83;
+  --primary-hover: #05666b;
+  --border: #e4edf5;
+  --navbar-bg: rgba(255, 255, 255, 0.88);
+  --shadow: 0 8px 30px rgba(20, 60, 90, 0.07);
+}
+
+[data-theme="dark"] {
+  --bg: #101820;
+  --surface: #192832;
+  --text: #f1f5f9;
+  --muted: #a7b6c2;
+  --primary: #35c6b4;
+  --primary-hover: #53dcca;
+  --border: #2a3c48;
+  --navbar-bg: rgba(16, 24, 32, 0.9);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
