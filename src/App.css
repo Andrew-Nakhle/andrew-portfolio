@@ -402,45 +402,92 @@
   height: 20px;
 }
 
+
 /* RIGHT VISUAL */
 
 .hero-visual {
   position: relative;
-  min-height: 480px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
 
 .hero-shape {
   position: absolute;
-  width: 78%;
-  height: 82%;
-  background: linear-gradient(145deg,
-      #80e6d0,
-      #087f83);
-  border-radius: 42% 58% 48% 52% / 40% 45% 55% 60%;
-  transform: rotate(-7deg);
+  z-index: -1;
+  width: 88%;
+  height: 78%;
+  background: linear-gradient(145deg, #80e6d0, #087f83);
+  border-radius: 50%;
+  transform: rotate(-12deg);
   opacity: 0.95;
 }
 
 .hero-image-wrapper {
   position: relative;
   z-index: 1;
-  width: min(78%, 410px);
-  height: 460px;
+  width: min(76%, 400px);
+  height: 470px;
   overflow: hidden;
-  border-radius: 45% 45% 20px 20px;
+  border-radius: 48% 48% 24px 24px;
+  border: 7px solid var(--bg);
+  box-shadow: 0 18px 45px rgba(15, 45, 65, 0.16);
+  background: var(--surface);
 }
 
 .hero-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 20%;
 }
 
 /* FLOATING CARDS */
+
+.floating-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  box-shadow: var(--shadow);
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-icon {
+  color: var(--primary);
+}
+
+.floating-card h3 {
+  color: var(--text);
+  font-size: 19px;
+  margin-bottom: 7px;
+}
+
+.floating-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.ai-card {
+  top: 65px;
+  left: 0;
+}
+
+.backend-card {
+  top: 145px;
+  right: 0;
+  animation-delay: 1s;
+}
+
 
 .floating-card {
   position: absolute;
@@ -520,11 +567,11 @@
   }
 
   .hero-visual {
-    min-height: 410px;
+    min-height: 440px;
   }
 
   .hero-image-wrapper {
-    height: 390px;
+    height: 410px;
   }
 
   .floating-card {
@@ -558,11 +605,12 @@
   }
 
   .hero-visual {
-    min-height: 430px;
+    min-height: 440px;
     margin-top: 20px;
   }
 
   .hero-image-wrapper {
+    width: min(78%, 350px);
     height: 390px;
   }
 
