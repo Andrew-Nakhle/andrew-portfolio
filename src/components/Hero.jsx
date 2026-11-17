@@ -74,7 +74,7 @@ function Hero({ language }) {
                         </a>
 
                         <a
-                            href="/files/Andrew-Nakhle-CV.pdf"
+                           href={`${import.meta.env.BASE_URL}files/Andrew-Nakhle-CV.pdf`}
                             className="hero-secondary-btn"
                             download="Andrew-Nakhle-CV.pdf"
                         >
@@ -123,7 +123,7 @@ function Hero({ language }) {
 
                     <div className="hero-image-wrapper">
                         <img
-                            src="/images/profile.png"
+                       src={`${import.meta.env.BASE_URL}images/profile.png`}
                             alt="Andrew Nakhle"
                             className="hero-image"
                         />
